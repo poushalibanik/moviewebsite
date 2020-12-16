@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365Entertainment</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    *{
+      background-color: black;
+    }
+    h2{
+        color:white;
+        padding-bottom:30px;
+        border-bottom:1px solid white;
+        
+    }
+    img{
+        width:183px;
+        height:275px;
+    }
+    
+    div{
+          display:inline-block;
+          margin-left:20px;
+          margin-right:20px;
+          
+        }
+     h3{
+           position:absolute;
+            color:white;
+            width:183px;
+            height:91px;
+            text-align:center;
+            opacity:0.7;
+     }
+     .txtbox{
+        top:850px;
+         }
+   .third{
+        top:1190px;
+    }
+    .fourth{
+        top:1525px;
+    }
+    .fifth{
+        top:1860px;
+    }
+    .santa{
+        top:2200px;
+    }
+ 
+    </style>
+</head>
+<link rel="stylesheet" href="ism/css/my-slider.css"/>
+
+<body>
+    <div class="menu">
+            <li id="logo"><a href="#">365</a></li>
+            <li><a href="/movies.html" target="xyz">Movies</a></li>
+            <li><a href="/TVseries.html" target="xyz">TV Series</a></li>
+            <li><a href="/audio.html" target="xyz">Audio</a></li>
+    </div>
+          <div class="ism-slider" data-radios="false" id="my-slider">
+            <ol>
+              <li>
+                <img src="ism/image/slides/_u/1607598226746_382550.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598418113_629354.webp">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598431876_334059.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598423455_110401.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598438534_180990.jpg">
+              </li>
+            </ol>
+          </div> 
+  <section>
+  <div class="block">
+     <select>
+       <option selected disabled hidden>genre</option>
+       <option>All</option>
+       <option>Action</option>
+       <option>Thriller</option>
+       <option>Comedy</option>
+       <option>Sci-Fi</option>
+       <option>Horror</option>
+      </select>
+    <form>
+      <input type="text" name="search" id="myinput" placeholder="Search your favourite movie title" onkeyup="myfunction()">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+  </div>
+  </section>
+  
+    <h2>Popular in action</h2>
+    <div id="actionMovie">
+      <!-- <div><img src="moviepics/action1.jpg"><h3 class="txtbox">Dabangg3<br>Action,Thriller</h3></div>
+      <div><img src="moviepics/action2.jpg"><h3 class="txtbox">Tanhaji<br>Action,Thriller,Epic film</h3></div>
+      <div><img src="moviepics/action3.jpg"><h3 class="txtbox">Phantom<br>Terror,Fighter</h3></div>
+      <div><img src="moviepics/action4.jpg"><h3 class="txtbox">Haider<br>Action,thriller</h3></div>
+      <div><img src="moviepics/action5.jpg"><h3 class="txtbox">Hobbs and Shaw<br>Hollywood action movie</h3></div>
+      <div><img src="moviepics/action6.jpg"><h3 class="txtbox">Shoot out<br>Hollywood action sequel</h3></div> -->
+    </div>
+    <h2>Popular in comedy</h2>
+    <div><img src="moviepics/comedy1.jpg"><h3 class="third">Once upon a time in hollywood</h3></div>
+    <div><img src="moviepics/comedy2.jpg"><h3 class="third">Brides maids</h3></div>
+    <div><img src="moviepics/comedy3.jpg"><h3 class="third">How to lose a guy in 10days</h3></div>
+    <div><img src="moviepics/comedy4.jpg"><h3 class="third">Lovebirds</h3></div>
+    <div><img src="moviepics/comedy5.jpg"><h3 class="third">Badhaai Ho</h3></div>
+    <div><img src="moviepics/comedy6.jpg"><h3 class="third">Bajatey Raho</h3></div>
+    <h2>Popular in sci-fi</h2>
+    <div><img src="moviepics/scifi1.jpg"><h3 class="fourth">Another earth</h3></div>
+    <div><img src="moviepics/scifi2.jpg"><h3 class="fourth">Life</h3></div>
+    <div><img src="moviepics/scifi3.jpg"><h3 class="fourth">Gravity</h3></div>
+    <div><img src="moviepics/scifi4.jpg"><h3 class="fourth">Tron</h3></div>
+    <div><img src="moviepics/scifi5.jpg"><h3 class="fourth">Aliens</h3></div>
+    <div><img src="moviepics/scifi6.jpg"><h3 class="fourth">Invasion</h3></div>
+    <h2>Popular in horror</h2>
+    <div><img src="moviepics/horror1.jpg"><h3 class="fifth">Sinister</h3></div>
+    <div><img src="moviepics/horror2.jpg"><h3 class="fifth">Dont sleep</h3></div>
+    <div><img src="moviepics/horror3.jpg"><h3 class="fifth">The conjuring2</h3></div>
+    <div><img src="moviepics/horror4.jpg"><h3 class="fifth">The possession</h3></div>
+    <div><img src="moviepics/horror5.jpg"><h3 class="fifth">The witch</h3></div>
+    <div><img src="moviepics/horror6.jpg"><h3 class="fifth">The exorcist</h3></div>
+    <h2>Popular in thriller</h2>
+    <div><img src="moviepics/thriller1.jpg"><h3 class="santa">The girl in the smoke</h3></div>
+    <div><img src="moviepics/thriller2.jpg"><h3 class="santa">Look away</h3></div>
+    <div><img src="moviepics/thriller3.jpg"><h3 class="santa">Knock Knock</h3></div>
+    <div><img src="moviepics/thriller4.jpg"><h3 class="santa">Orphan</h3></div>
+    <div><img src="moviepics/thriller5.jpg"><h3 class="santa">The terrible two</h3></div>
+    <div><img src="moviepics/thriller6.jpg"><h3 class="santa">Joker</h3></div>
+ 
+    <div class="footer">
+      <a href="" target="abc">365</a>
+      <a href="" target="pou">Powered by 365 Entertainment Portal 2019.All Rights Reserved.</a>
+    </div>
+<script>
+  const movies = [
+    {id: 1, movieUrl: 'moviepics/action1.jpg', movieName: 'Dabangg3', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2,movieUrl: 'moviepics/action2.jpg', movieName: 'Tanhaji', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id:3,movieUrl: 'moviepics/action3.jpg', movieName: 'Phantom', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4,movieUrl: 'moviepics/action4.jpg', movieName: 'Haider', despcription: 'Action,thriller', catagory: 'action'},
+    {id:5,movieUrl: 'moviepics/action5.jpg', movieName: 'Hobbs and Shaw', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id:6,movieUrl: 'moviepics/action6.jpg', movieName: 'Shoot out', despcription: 'Hollywood action movie', catagory: 'action'}
+]
+const actionmovie = document.getElementById('actionMovie');
+let innetValue;
+movies.forEach((movie) => {
+  innetValue += `<div><img src="${movie.movieUrl}"><h3 class="txtbox">${movie.movieName}<br>${movie.catagory}, ${movie.despcription}</h3></div>`;
+});
+actionmovie.innerHTML = innetValue;
+
+// const movies = [
+//     {id: 1, movieUrl: 'moviepics/comedy1.jpg', movieName: 'Once upon a time in hollywood', despcription: 'comedy,Thriller', catagory: 'comedy'},
+//     {id: 2,movieUrl: 'moviepics/comedy2.jpg', movieName: 'Brides maids', despcription: 'hollywood comedy', catagory: 'comedy'},
+//     {id:3,movieUrl: 'moviepics/comedy3.jpg', movieName: 'How to lose a guy in 10days', despcription: 'funny', catagory: 'comedy'},
+//     {id: 4,movieUrl: 'moviepics/comedy4.jpg', movieName: 'Lovebirds', despcription: 'comedy', catagory: 'comedy'},
+//     {id:5,movieUrl: 'moviepics/comedy5.jpg', movieName: 'Badhaai Ho', despcription: 'bollywood comedy movie', catagory: 'comedy'},
+//     {id:6,movieUrl: 'moviepics/comedy6.jpg', movieName: 'Bajatey Raho', despcription: 'comedy action movie', catagory: 'comedy'}
+// ]
+// const comedymovie = document.getElementById('comedyMovie');
+// let innetValue;
+// movies.forEach((movie) => {
+//   innetValue += `<div><img src="${movie.movieUrl}"><h3 class="txtbox">${movie.movieName}<br>${movie.catagory}, ${movie.despcription}</h3></div>`;
+// });
+// actionmovie.innerHTML = innetValue;
+
+
+
+</script>
+    
+ <!--<script>
+  function myfunction(){
+     var input,filter,div,img,h3,i,txtvalue;
+      filter= document.getElementById('myinput').value.toUpperCase();
+     div =document.getElementById("movies");
+     img=div.getElementsByTagName('img');
+     for(i=0;i<li.length;i++){
+       h3=img[i].getElementsByTagName('h3')[0];
+       txtvalue=h3.textContent||h3.innerText;
+       if(txtvalue.toUpperCase().indexOf(filter)>-1){
+         img[i].style.display="";
+       }else{
+        img[i].style.display="none";
+       }
+     }
+   }
+ </script>-->
+  <script src="ism/js/ism-2.2.min.js"></script>
+  
+ 
+
+
+</body>
+</html>
