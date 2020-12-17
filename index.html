@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    *{
+      background-color: black;
+    }
+    h2{
+        color:white;
+        padding-bottom:30px;
+        border-bottom:1px solid white;
+        
+    }
+    img{
+        width:183px;
+        height:275px;
+    }
+    
+    div{
+          display:inline-block;
+          margin-left:20px;
+          margin-right:20px;
+          
+        }
+     h3{
+           position:absolute;
+            color:white;
+            width:183px;
+            height:91px;
+            text-align:center;
+            opacity:0.7;
+     }
+    .txtbox{
+        top:850px;
+    }
+   .third{
+        top:1190px;
+    }
+    .fourth{
+        top:1525px;
+    }
+    .fifth{
+        top:1860px;
+    }
+    .santa{
+        top:2200px;
+    }
+ 
+    </style>
+</head>
+<link rel="stylesheet" href="ism/css/my-slider.css"/>
+
+<body>
+    <div class="menu">
+            <li id="logo"><a href="#">365</a></li>
+            <li><a href="/movies.html" target="xyz">Movies</a></li>
+            <li><a href="/TVseries.html" target="xyz">TV Series</a></li>
+            <li><a href="/audio.html" target="xyz">Audio</a></li>
+    </div>
+          <div class="ism-slider" data-radios="false" id="my-slider">
+            <ol>
+              <li>
+                <img src="ism/image/slides/_u/1607598226746_382550.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598418113_629354.webp">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598431876_334059.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598423455_110401.jpg">
+              </li>
+              <li>
+                <img src="ism/image/slides/_u/1607598438534_180990.jpg">
+              </li>
+            </ol>
+          </div> 
+  <section>
+  <div class="block">
+     <select>
+       <option selected>All</option>
+       <option>Action</option>
+       <option>Thriller</option>
+       <option>Comedy</option>
+       <option>Sci-Fi</option>
+       <option>Horror</option>
+      </select>
+    <form>
+      <input type="text" name="search" id="myinput" placeholder="Search your favourite movie title">
+      <i class="fa fa-search" aria-hidden="true"></i>
+    </form>
+  </div>
+  </section>
+  
+    <div id="actionMovieSec">
+      <h2>Popular in action</h2>
+      <div id="actionMovieList">
+        
+      </div>
+    </div>
+    <div id="comedyMovieSec">
+      <h2>Popular in comedy</h2>
+      <div id="comedyMovieList">
+        
+      </div>
+    </div>
+    <div id="sciFiMovieSec">
+      <h2>Popular in sci-fi</h2>
+      <div id="sciFiMovieList">
+        
+      </div>
+    </div>
+    <div id="horrorMovieSec">
+      <h2>Popular in horror</h2>
+      <div id="horrorMovieList">
+        
+      </div>
+    </div>
+    <div id="thrillerMovieSec">
+      <h2>Popular in thriller</h2>
+      <div id="thrillerMovieList">
+        
+      </div>
+    </div>
+ 
+    <div class="footer">
+      <a href="" target="abc">365</a>
+      <a href="" target="pou">Powered by 365 Entertainment Portal 2019.All Rights Reserved.</a>
+    </div>
+<script>
+  // actionMovieList
+  const actionMovies = [
+    {id: 1, movieUrl: 'moviepics/action1.jpg', movieName: 'Dabangg3', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2, movieUrl: 'moviepics/action2.jpg', movieName: 'Tanhaji', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id: 3, movieUrl: 'moviepics/action3.jpg', movieName: 'Phantom', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4, movieUrl: 'moviepics/action4.jpg', movieName: 'Haider', despcription: 'Action,thriller', catagory: 'action'},
+    {id: 5, movieUrl: 'moviepics/action5.jpg', movieName: 'Hobbs and Shaw', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id: 6, movieUrl: 'moviepics/action6.jpg', movieName: 'Shoot out', despcription: 'Hollywood action movie', catagory: 'action'}
+  ]
+
+  const ShowActionMovie = (val) => {
+    const actionMovieSec = document.getElementById("actionMovieSec");
+      if(val.length){
+        actionMovieSec.style.display = "block";
+          const actionMovieList = document.getElementById('actionMovieList');
+          let innerValue = '';
+          val.forEach((movie) => {
+            innerValue += `<div><img src="${movie.movieUrl}"><h3 class="txtbox">${movie.movieName}</h3></div>`;
+          });
+          actionMovieList.innerHTML = innerValue;
+      } else {
+        actionMovieSec.style.display = "none";
+      }
+  }
+
+  ShowActionMovie(actionMovies);
+
+  // comedyMovieList
+  const comedyMovies = [
+    {id: 1, movieUrl: 'moviepics/comedy1.jpg', movieName: 'Once upon a time in hollywood', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2, movieUrl: 'moviepics/comedy2.jpg', movieName: 'Brides maids', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id: 3, movieUrl: 'moviepics/comedy3.jpg', movieName: 'How to lose a guy in 10days', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4, movieUrl: 'moviepics/comedy4.jpg', movieName: 'Lovebirds', despcription: 'Action,thriller', catagory: 'action'},
+    {id: 5, movieUrl: 'moviepics/comedy5.jpg', movieName: 'Badhaai Ho', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id: 6, movieUrl: 'moviepics/comedy6.jpg', movieName: 'Bajatey Raho', despcription: 'Hollywood action movie', catagory: 'action'}
+  ]
+  const comedyMovieList = document.getElementById('comedyMovieList');
+  let innerValue1 = '';
+  comedyMovies.forEach((movie) => {
+    innerValue1 += `<div><img src="${movie.movieUrl}"><h3 class="third">${movie.movieName}</h3></div>`;
+  });
+  comedyMovieList.innerHTML = innerValue1;
+
+  // sciFiMovieList
+  const sciFiMovies = [
+    {id: 1, movieUrl: 'moviepics/scifi1.jpg', movieName: 'Another earth', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2, movieUrl: 'moviepics/scifi2.jpg', movieName: 'Life', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id: 3, movieUrl: 'moviepics/scifi3.jpg', movieName: 'Gravity', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4, movieUrl: 'moviepics/scifi4.jpg', movieName: 'Tron', despcription: 'Action,thriller', catagory: 'action'},
+    {id: 5, movieUrl: 'moviepics/scifi5.jpg', movieName: 'Aliens', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id: 6, movieUrl: 'moviepics/scifi6.jpg', movieName: 'Invasion', despcription: 'Hollywood action movie', catagory: 'action'}
+  ]
+  const sciFiMovieList = document.getElementById('sciFiMovieList');
+  let innerValue2 = '';
+  sciFiMovies.forEach((movie) => {
+    innerValue2 += `<div><img src="${movie.movieUrl}"><h3 class="fourth">${movie.movieName}</h3></div>`;
+  });
+  sciFiMovieList.innerHTML = innerValue2;
+
+  // horrorMovieList
+  const horrorMovies = [
+    {id: 1, movieUrl: 'moviepics/horror1.jpg', movieName: 'Sinister', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2, movieUrl: 'moviepics/horror2.jpg', movieName: 'Dont sleep', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id: 3, movieUrl: 'moviepics/horror3.jpg', movieName: 'The conjuring2', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4, movieUrl: 'moviepics/horror4.jpg', movieName: 'The possession', despcription: 'Action,thriller', catagory: 'action'},
+    {id: 5, movieUrl: 'moviepics/horror5.jpg', movieName: 'The witch', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id: 6, movieUrl: 'moviepics/horror6.jpg', movieName: 'The exorcist', despcription: 'Hollywood action movie', catagory: 'action'}
+  ]
+  const horrorMovieList = document.getElementById('horrorMovieList');
+  let innerValue3 = '';
+  horrorMovies.forEach((movie) => {
+    innerValue3 += `<div><img src="${movie.movieUrl}"><h3 class="fifth">${movie.movieName}</h3></div>`;
+  });
+  horrorMovieList.innerHTML = innerValue3;
+
+
+  // thrillerMovieList
+  const thrillerMovies = [
+    {id: 1, movieUrl: 'moviepics/thriller1.jpg', movieName: 'The girl in the smoke', despcription: 'Action,Thriller', catagory: 'action'},
+    {id: 2, movieUrl: 'moviepics/thriller2.jpg', movieName: 'Look away', despcription: 'Action,Thriller,Epic film', catagory: 'action'},
+    {id: 3, movieUrl: 'moviepics/thriller3.jpg', movieName: 'Knock Knock', despcription: 'Terror,Fighter', catagory: 'action'},
+    {id: 4, movieUrl: 'moviepics/thriller4.jpg', movieName: 'Orphan', despcription: 'Action,thriller', catagory: 'action'},
+    {id: 5, movieUrl: 'moviepics/thriller5.jpg', movieName: 'The terrible two', despcription: 'Hollywood action movie', catagory: 'action'},
+    {id: 6, movieUrl: 'moviepics/thriller6.jpg', movieName: 'Joker', despcription: 'Hollywood action movie', catagory: 'action'}
+  ]
+  const thrillerMovieList = document.getElementById('thrillerMovieList');
+  let innerValue4 = '';
+  thrillerMovies.forEach((movie) => {
+    innerValue4 += `<div><img src="${movie.movieUrl}"><h3 class="santa">${movie.movieName}</h3></div>`;
+  });
+  thrillerMovieList.innerHTML = innerValue4;
+
+  const searchBar = document.getElementById('myinput');
+  searchBar.addEventListener('keyup', ()=>{
+      const searchText = searchBar.value;
+      if(searchText != '') {
+          console.log(searchText);
+          filteredActionMovies = actionMovies.filter((val) => val.movieName.includes(searchText))
+          console.log(filteredActionMovies);
+          ShowActionMovie(filteredActionMovies);
+      } else {
+        ShowActionMovie(actionMovies);
+      }
+  })
+</script>
+    
+<script src="ism/js/ism-2.2.min.js"></script>
+  
+ 
+
+
+</body>
+</html>
